@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Flavor Rush - Premium Fast Food Restaurant with delicious meals, fast delivery, and excellent service">
+    <meta name="theme-color" content="#FF6B35">
+    <title>Flavor Rush | Premium Fast Food Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <span class="logo-icon">🍔</span>
+                <span class="brand-name">Flavor Rush</span>
+            </div>
+
+            <nav class="nav-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#menu" class="nav-link">Menu</a>
+                <a href="#deals" class="nav-link">Deals</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="navbar-actions">
+                <button class="search-btn" id="searchBtn" aria-label="Search">🔍</button>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+                <button class="cart-btn" id="cartBtn" aria-label="Shopping cart">🛒<span class="cart-count"
+                        id="cartCount">0</span></button>
+                <button class="menu-toggle" id="menuToggle"
+                    aria-label="Toggle menu"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#home" class="mobile-nav-link">Home</a>
+        <a href="#menu" class="mobile-nav-link">Menu</a>
+        <a href="#deals" class="mobile-nav-link">Deals</a>
+        <a href="#about" class="mobile-nav-link">About</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Taste the <span class="highlight">Flavor</span></h1>
+                <p class="hero-subtitle">Premium fast food delivered to your doorstep in minutes</p>
+                <div class="hero-buttons">
+                    <button class="cta-btn"
+                        onclick="document.getElementById('menu').scrollIntoView({behavior: 'smooth'})">Order
+                        Now</button>
+                    <button class="cta-btn secondary">Learn More</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="food-card rotating">
+                    <div class="food-emoji">🍔</div>
+                </div>
+                <div class="floating-shapes">
+                    <span class="shape">🍕</span>
+                    <span class="shape">🍟</span>
+                    <span class="shape">🥤</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat">
+                <h3>50K+</h3>
+                <p>Happy Customers</p>
+            </div>
+            <div class="stat">
+                <h3>1000+</h3>
+                <p>Menu Items</p>
+            </div>
+            <div class="stat">
+                <h3>24/7</h3>
+                <p>Open Daily</p>
+            </div>
+            <div class="stat">
+                <h3>30 min</h3>
+                <p>Fast Delivery</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Flavor Rush?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Fresh Ingredients</h3>
+                    <p>Only the freshest and highest quality ingredients for every meal</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Lightning Fast</h3>
+                    <p>Average delivery time of 30 minutes or guaranteed free meal</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Best Prices</h3>
+                    <p>Competitive pricing with daily deals and special discounts</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">😋</div>
+                    <h3>Delicious Taste</h3>
+                    <p>Authentic recipes prepared by professional award-winning chefs</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Award Winning</h3>
+                    <p>Recognized as best fast food for 5 consecutive years</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>100% Satisfaction</h3>
+                    <p>Full refund if not satisfied with your order</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu-section" id="menu">
+        <div class="container">
+            <h2 class="section-title">Our Premium Menu</h2>
+
+            <div class="menu-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="burgers">Burgers</button>
+                <button class="filter-btn" data-filter="pizza">Pizza</button>
+                <button class="filter-btn" data-filter="chicken">Chicken</button>
+                <button class="filter-btn" data-filter="desserts">Desserts</button>
+                <button class="filter-btn" data-filter="beverages">Beverages</button>
+            </div>
+
+            <div class="menu-grid" id="menuGrid">
+                <!-- Menu items generated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Deals Section -->
+    <section class="deals-section" id="deals">
+        <div class="container">
+            <h2 class="section-title">Limited Time Offers</h2>
+            <div class="deals-grid">
+                <div class="deal-card">
+                    <div class="deal-badge">50% OFF</div>
+                    <h3>Combo Meal Pack</h3>
+                    <p>Burger + Fries + Drink</p>
+                    <div class="deal-price"><span class="original">$15.99</span><span class="discounted">$7.99</span>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart('Combo Pack', 7.99)">Add to Cart</button>
+                </div>
+                <div class="deal-card">
+                    <div class="deal-badge">35% OFF</div>
+                    <h3>Pizza Party</h3>
+                    <p>2 Large Pizzas</p>
+                    <div class="deal-price"><span class="original">$39.99</span><span class="discounted">$25.99</span>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart('Pizza Party', 25.99)">Add to Cart</button>
+                </div>
+                <div class="deal-card">
+                    <div class="deal-badge">FREE</div>
+                    <h3>Free Delivery</h3>
+                    <p>Orders over $50</p>
+                    <div class="deal-price"><span class="original">$5.00 Fee</span><span class="discounted">FREE</span>
+                    </div>
+                    <button class="add-to-cart-btn">Order Now</button>
+                </div>
+                <div class="deal-card">
+                    <div class="deal-badge">BUY 1 GET 1</div>
+                    <h3>Chicken Tenders</h3>
+                    <p>Buy 1 Get 1 Free</p>
+                    <div class="deal-price"><span class="original">$12.99</span><span class="discounted">$12.99</span>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart('Chicken Tenders', 12.99)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Gallery Showcase</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-image">🍕</div>
+                    <p>Delicious Pizza</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image">🍔</div>
+                    <p>Premium Burger</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image">🍟</div>
+                    <p>Crispy Fries</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image">🌭</div>
+                    <p>Hot Dogs</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image">🥤</div>
+                    <p>Refreshing Drinks</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image">🍰</div>
+                    <p>Sweet Desserts</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews-section">
+        <div class="container">
+            <h2 class="section-title">Customer Reviews</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p>"The best fast food I've ever had! Fresh, delicious, and delivered quickly."</p>
+                    <div class="reviewer-info"><span>👨 John Smith</span><span>2 days ago</span></div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Amazing service! The staff is very friendly and the food quality is exceptional."</p>
+                    <div class="reviewer-info"><span>👩 Sarah Johnson</span><span>1 week ago</span></div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Perfect for family dinner! Kids loved the food and we all enjoyed the experience."</p>
+                    <div class="reviewer-info"><span>👨‍👩‍👧 Mike Davis</span><span>2 weeks ago</span></div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Highly recommend! I order from here at least twice a week. Never disappoints!"</p>
+                    <div class="reviewer-info"><span>👱 Emily Brown</span><span>3 weeks ago</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog-section">
+        <div class="container">
+            <h2 class="section-title">Food Blog</h2>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">📸</div>
+                    <div class="blog-meta"><span>Jun 15, 2024</span> | <span>By Chef Alex</span></div>
+                    <h3>5 Secret Tips to Make Perfect Burgers</h3>
+                    <p>Learn the professional techniques used by our chefs to create the most delicious burgers.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-image">🎥</div>
+                    <div class="blog-meta"><span>Jun 10, 2024</span> | <span>By Chef Maria</span></div>
+                    <h3>Healthy Fast Food Options</h3>
+                    <p>Discover how we're making fast food healthier without compromising on taste.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-image">🍽️</div>
+                    <div class="blog-meta"><span>Jun 5, 2024</span> | <span>By Chef James</span></div>
+                    <h3>Behind the Scenes: Our Kitchen</h3>
+                    <p>Take a look at our state-of-the-art kitchen and meet the team that creates magic daily.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About Flavor Rush</h2>
+                    <p>Founded in 2015, Flavor Rush has become the leading fast food restaurant. We're committed to
+                        providing exceptional quality, outstanding service, and great value to our customers.</p>
+                    <p>Our mission is to deliver delicious, fresh, and healthy fast food without compromising on quality
+                        or speed. Every dish is prepared with care using premium ingredients and authentic recipes.</p>
+                    <div class="about-stats">
+                        <div class="about-stat">
+                            <h4>9 Years</h4>
+                            <p>In Business</p>
+                        </div>
+                        <div class="about-stat">
+                            <h4>15</h4>
+                            <p>Locations</p>
+                        </div>
+                        <div class="about-stat">
+                            <h4>500+</h4>
+                            <p>Employees</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">🏪</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Get exclusive offers, new menu items, and updates delivered to your inbox</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="subscribe-btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <h3>Send us a Message</h3>
+                    <form id="contactForm">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="tel" placeholder="Your Phone" required>
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">📍</div>
+                        <h4>Location</h4>
+                        <p>123 Main Street<br>Food City, FC 12345<br>United States</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">📞</div>
+                        <h4>Phone</h4>
+                        <p>+1 (555) 123-4567<br>+1 (555) 234-5678<br>Available 24/7</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">✉️</div>
+                        <h4>Email</h4>
+                        <p>info@flavorush.com<br>support@flavorush.com<br>orders@flavorush.com</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">⏰</div>
+                        <h4>Hours</h4>
+                        <p>Mon-Fri: 10AM-11PM<br>Sat-Sun: 11AM-12AM<br>Holidays: 12PM-10PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question"><span>How long does delivery take?</span><span>▼</span></button>
+                    <div class="faq-answer">
+                        <p>Average delivery is 30 minutes from order time. Peak hours may take 45 min to 1 hour. Track
+                            your order in real-time.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question"><span>What payment methods accepted?</span><span>▼</span></button>
+                    <div class="faq-answer">
+                        <p>All major credit cards, debit cards, digital wallets (Apple Pay, Google Pay), and cash on
+                            delivery available.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question"><span>Do you offer vegetarian options?</span><span>▼</span></button>
+                    <div class="faq-answer">
+                        <p>Yes! We have veggie burgers, plant-based pizzas, salads, and vegetable sides. Check menu for
+                            full selection.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question"><span>Can I customize my order?</span><span>▼</span></button>
+                    <div class="faq-answer">
+                        <p>Absolutely! Customize any item: add/remove toppings, choose sauces, adjust portion sizes as
+                            you prefer.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question"><span>Do you deliver outside the city?</span><span>▼</span></button>
+                    <div class="faq-answer">
+                        <p>We deliver to most areas within 5 miles of the city center. Use our delivery calculator to
+                            check.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question"><span>What's your refund policy?</span><span>▼</span></button>
+                    <div class="faq-answer">
+                        <p>100% satisfaction guarantee. Contact us within 2 hours if unsatisfied for replacement or full
+                            refund.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Us</h4>
+                    <ul>
+                        <li><a href="#about">Our Story</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Order Status</a></li>
+                        <li><a href="#">Track Order</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#">👍</a>
+                        <a href="#">𝕏</a>
+                        <a href="#">📷</a>
+                        <a href="#">▶️</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Flavor Rush. All rights reserved. | Made with ❤️ for Food Lovers</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div class="modal" id="searchModal">
+        <div class="modal-content search-modal">
+            <input type="text" id="searchInput" placeholder="Search for food..." class="search-input">
+            <div id="searchResults"></div>
+        </div>
+    </div>
+
+    <div class="modal" id="cartModal">
+        <div class="modal-content cart-modal">
+            <div class="modal-header">
+                <h2>Shopping Cart</h2>
+                <button class="close-btn" onclick="closeModal('cartModal')">✕</button>
+            </div>
+            <div class="cart-items" id="cartItems"></div>
+            <div class="cart-summary">
+                <div class="summary-row"><span>Subtotal:</span><span id="subtotal">$0.00</span></div>
+                <div class="summary-row"><span>Delivery Fee:</span><span id="deliveryFee">$5.00</span></div>
+                <div class="summary-row total"><span>Total:</span><span id="total">$0.00</span></div>
+            </div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
