@@ -220,7 +220,7 @@ body.menu-open {
     padding: 20px;
     position: fixed;
     z-index: 1500;
-    top: 80px;
+    top: 95px;
     right: 0;
     left: 0;
     box-shadow: var(--shadow);
